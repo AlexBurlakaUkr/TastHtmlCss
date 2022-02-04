@@ -1,0 +1,250 @@
+
+/* обниление всех отступов */
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-color: #fafafa;
+    color: #0f141e;
+
+    font-size: 16px;
+    font-weight: 500;
+    /* добавленный шрифт с гугла */
+    font-family: 'Roboto', sans-serif;
+
+    /* font: normal 20px 'Roboto', sans-serif; */
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', */
+     /* 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* стейты (события в селекторах */
+/* измерение текста при наведении на него курсора */
+a:hover{
+    text-decoration: underline;
+}
+/* изменение цвета текста при нажатии курсором */
+a:active{
+    color: blue;
+}
+/* я ссылок - меняется цвет ссылки которую мы уже посетили */
+a:visited{
+    color: rgba(79, 71, 87, 0.308);
+}
+/* картинка с классом */
+.foto{
+    width: 200px;
+    /* закругление углов на картинке */
+    border-radius: 50px;
+    /* создание теней вокруг картинки */
+    box-shadow: 4px 4px 14px rgba(0, 0 , 0, 0.25);
+}
+/* картинка с id */
+#car{
+    width: 400px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 14px rgba(0, 0 , 0, 0.25);
+}
+.info{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* конструкции для адаптации на разных экранах */
+
+@media(max-width: 700px){
+    .info {
+        text-align: center;
+        /* перенос текста на другуб строку, если не помещается при сжимании окана на основной строке */
+        display: block;
+    }
+
+}
+.info-text{
+    margin-left: 40px;
+}
+.info-text h4{
+    margin-bottom: 10px;
+}
+.info p {
+    color: #86898f;
+    /* отступы между строками */
+    margin: 0;
+    /* наклон текста */
+    font-style: italic;
+    /* жирный текст */
+    font-weight: bold;
+    /* подчеркивание текста */
+    /* text-decoration: underline; */
+    /* звчеркнутый текст */
+    /* text-decoration: line-through; */
+    text-decoration: none;
+    /* изменение текста - маленькие буквы */
+    /* text-transform: lowercase; */
+    /* Каждое слово с большой буквы */
+    text-transform: capitalize;
+    /* растояние между символами */
+    letter-spacing: 1px;
+    /* растояние между словами */
+    word-spacing: 5px;
+}
+/* Box model */
+.conteiner{
+    /* указываем максимаьный размер экрана, но мах позволяет экрану адаптироваться с уменьшением */
+    max-width: 750px;
+    /* отцентровать контент сайта */
+    margin: auto;
+    padding-top: 30px;
+}
+.bg-yellow{
+    background: #fff9dc;
+}
+.bg-green{
+    background: #e5ffe7;
+}
+.bg-red{
+    background: #ffe5e5;
+}
+.card{
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.card h2{
+    margin-bottom: 10px;
+}
+.list{
+    padding: 0 20px;
+    /* убираем все цифры и точки с перечисления саписка */
+    /* list-style: none; */
+}
+.list li{
+    color: #86898f;
+    margin-bottom: 10px;
+    /* подчеркивание строк списка */
+    /* border-bottom: 1px solid grey; */
+}
+.table{
+    /* ширина таблицы на весь экран */
+    width: 100%;
+}
+.table td{
+    /* внутренний отступ между строками */
+    padding-bottom: 10px;
+}
+/* псевдо селектор для выбора определенных элементов в таблице */
+.table td:nth-child(1),
+.table td:nth-child(3){
+    color: #86898f;
+}
+/* фон строка таблицы покрасить нечетная (add) четная*/
+/* .table tr:nth-child(even){
+    color: greenyellow;
+} */
+.link-list{
+    /* убираем стандартный стиль для спска */
+    list-style: none;
+    padding: 0;
+}
+.link-list li{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+
+}
+/* делем текст заголовка по центру */
+.contact h2{
+    text-align :center;
+}
+/* текст лейбдлв над блоками */
+.form-group label{
+    display: block;
+    font-size: 14px;
+    color: #86898f;
+}
+/* вносим изменения в сами болоки */
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    /* цвет фона с роки как и у общего фона страницы */
+    /* background: transparent; */
+    /* заваем границы для строки */
+    border-bottom: 1px solid #ccc;
+    /* цвет текста в инпутах */
+    color: #000;
+    /* отступы в сроке */
+    padding: 15px 0 10px;
+    /* убирием свечние строки по периметру при наведении */
+    outline: none;
+    /* делаем шрифт в инпутах как и на всей странице */
+    font-family: inherit;
+}
+.row {
+    /* убрать элементы с дисплея */
+    /* display: none; */
+    display: flex;
+    margin-bottom: 20px;
+}
+/* задаем размеры строки и отступы */
+.row > .form-group{
+    width: 50%;
+    margin-right: 20px;
+}
+.row > .form-group:last-child{
+    margin-right: 0;
+}
+.btn {
+    background: #111    ;
+    padding: 15px 20px;
+    color: #fff9dc;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 10px;
+}
+/* интерактив на кнопке */
+.btn:hover {
+    opacity: 0.9;
+}
+/*  Position*/
+/* .position{
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 30px;
+} */
+/* .box{ */
+    /* позиционрование блока */
+    /* блок висит в одном месте экрана */
+    /* position: fixed;
+    top: 100px;
+    right: 20px; */
+    /* блок висит справа внизу как на сайтах с формами */
+    /* position: fixed;
+    bottom: 50px;
+    border-radius: 50%; */
+    /* для баннеров */
+    /* position: fixed;
+    bottom: 50%;
+    left: 0px;
+
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: lightcoral; */
+    /* навигация */
+    /* position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 20px;
+    background: lightcoral; */
+/* } */
